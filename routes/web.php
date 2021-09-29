@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('welcome',compact('pictures'));
 })->name('welcome');
 
+Route::get('/carou', function () {
+    return view('carrousel');
+})->name('carou');
+
 
 Route::resource('picture', PictureController::class);
 Route::post('/resize-file', [PictureController::class, 'resizeImage'])->name('resizeImage');
